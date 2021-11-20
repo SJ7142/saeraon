@@ -1,0 +1,258 @@
+/* header nav */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.header_nav {
+  display: flex;
+  padding-top: 47px;
+  padding-left: 36px;
+}
+
+.n_logo {
+  width: 144px;
+  height: 33px;
+  background: url(../img/saeraon_logo_w.png) no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.n_logo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header_nav ul {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header_nav li {
+  font-size: 14px;
+  margin-left: 62px;
+}
+
+.header_nav li > a {
+  position: relative;
+  display: block;
+  color: var(--color-white);
+  font-size: var(--font-body4);
+  font-weight: var(--weight-body4);
+  letter-spacing: var(--ls-body4);
+  white-space: nowrap;
+}
+
+
+.header_nav li > a::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: white;
+  margin-top: 1px;
+  transition: 0.5s;
+}
+
+.header_nav li > a:hover::after {
+  width: 100%;
+}
+
+.n_ham {
+  display: none;
+  transition: 0.5s;
+  position: absolute;
+  top: 40px;
+  right: 36px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.n_ham > span {
+  display: block;
+  border: 1px solid white;
+  width: 30px;
+  margin: 10px 0;
+}
+.active .n_ham {
+  padding-top: 20px;
+}
+.active .f_line {
+  margin: 0;
+  transform: rotate(45deg);
+  transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
+.active .s_line {
+  margin: 0;
+  transform: rotate(-45deg);
+  transition: transform 0.3192s 0.1s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
+.active .l_line {
+  display: none;
+}
+.active .header_nav ul {
+  display: block;
+}
+header.active {
+  background-color: #fff;
+  width: 100%;
+  height: 400px;
+}
+header.active .n_logo {
+  background: url(../img/logo_b.png) no-repeat;
+  background-size: contain;
+  width: 144px;
+  height: 33px;
+}
+header.active .header_nav li a {
+  color: #000;
+}
+header.active .n_ham > span {
+  border: 1px solid #000;
+}
+
+/* ------------------------------ */
+.logo_b {
+  background: url(../img/logo_b.png) no-repeat;
+  background-size: contain;
+  width: 144px;
+  height: 33px;
+}
+
+.hd_bg {
+  background: white;
+  padding-bottom: 47px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* ------------------------------ */
+
+/* media qr */
+@media screen and (max-width: 1023px) {
+  .n_ham {
+    display: block;
+  }
+  .header_nav {
+    flex-direction: column;
+  }
+  .header_nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header_nav li:first-child {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  .header_nav li {
+    padding: 10px 0;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #000;
+  padding: 100px 0;
+  transition: 0.5s;
+}
+
+footer > .fCenter {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+footer h1.logo {
+  margin-bottom: 10px;
+}
+
+.copy {
+  color: var(--color-light-gray);
+  font-size: var(--font-body4);
+  letter-spacing: var(--ls-body4);
+}
+
+.copy p {
+  margin: 5px 0;
+}
+
+.copy a {
+  color: var(--color-light-gray);
+}
+
+.footR {
+  transition: 0.5s;
+  text-align: end;
+}
+
+.telInfo {
+  margin-bottom: 10px;
+}
+
+.telInfo > p {
+  color: var(--color-white);
+  font-size: var(--font-body3);
+  letter-spacing: var(--ls-body3);
+  font-weight: var(--weight-body3);
+}
+
+.telInfo > p:first-of-type {
+  margin-bottom: 10px;
+  font-weight: var(--weight-h1);
+}
+
+address {
+  color: var(--color-light-gray);
+  font-size: var(--font-body4);
+  letter-spacing: var(--ls-body4);
+  font-weight: var(--weight-body4);
+}
+
+/* media qr */
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1450px) {
+  .fCenter {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer > .fCenter {
+    display: block;
+  }
+
+  .footR {
+    text-align: start;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 50px 0;
+  }
+
+  .telInfo > p {
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+  }
+}

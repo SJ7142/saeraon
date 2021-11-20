@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/business.css" />
+    <link rel="stylesheet" href="./css/business_res.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/headFoot.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      defer
+    ></script>
+    <script src="./js/hd.js" defer></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>SAERAON - BUSINESS</title>
+    <style>
+      .swiper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media all and (max-width: 767px) {
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 99;
+      }
+
+      @media all and (max-width: 767px) {
+        .swiper::before {
+          content: none;
+        }
+      }
+
+      .swiper.reverse-slide::before {
+        left: 0;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_nav">
+        <div class="n_logo"><a href="./index.html"></a></div>
+        <ul>
+          <li><a href="./saeraon.html">SAERAON</a></li>
+          <li><a href="./business.html">BUSINESS</a></li>
+          <li><a href="./announce.html">ANNOUNCE</a></li>
+          <li><a href="./careers.html">CAREERS</a></li>
+          <li><a href="./contact.html">CONTACT US</a></li>
+        </ul>
+        <div class="n_ham">
+          <span class="f_line"></span>
+          <span class="s_line"></span>
+          <span class="l_line"></span>
+        </div>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="main-banner">
+        <img
+          class="bg-banner-img"
+          src="./images/business/business_banner.jpg"
+          alt=""
+        />
+        <img
+          class="banner-icon"
+          src="./images/business/icon_saraon_large.png"
+          alt=""
+        />
+        <div class="container">
+          <div class="contents">
+            <h1 lang="en">BUSINESS</h1>
+            <p>
+              우리는 <br class="mobile-d-none" />
+              한차원 높은 생각과 전략으로 <br class="mobile-d-none" />
+              새로운 가치와 즐거움을 선사합니다
+            </p>
+          </div>
+        </div>
+      </div>
+      <section id="businessItr" class="container">
+        <h2>사업소개</h2>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">소프트웨어 개발</h3>
+            <ul id="devBtns" class="left-spacing">
+              <li>
+                <button class="on" data-btn-dev="0">기획 / 디자인</button>
+              </li>
+              <li>
+                <button data-btn-dev="1">Web / App 개발</button>
+              </li>
+              <li>
+                <button data-btn-dev="2">시스템 유지 / 보수</button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide">
+            <p>새라온은 고객의 생각보다 앞서 <span>불</span>을 밝히겠습니다.</p>
+            <div id="firSwiper" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/business/software_01.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/software_02.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/software_03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">매니지먼트</h3>
+            <ul class="left-spacing">
+              <li>
+                <button class="on" data-btn-manage="2">
+                  아티스트 발굴 및 육성
+                </button>
+              </li>
+              <li>
+                <button data-btn-manage="1">콘텐츠 기획 및 제작</button>
+              </li>
+              <li>
+                <button data-btn-manage="0">
+                  글로벌 엔터테인먼트 비즈니스
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide slide-right">
+            <p class="reverse-slide">
+              새라온은 아티스트와 함께
+              <span>성장</span>합니다.
+            </p>
+            <div id="secSwiper" class="swiper reverse-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/business/management_01.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/management_02.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/management_03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="wrap-content-header">
+            <h3 class="inner-container">음반 제작 유통</h3>
+            <ul class="left-spacing">
+              <li>
+                <button class="on" data-btn-music="0">음반 제작 및 유통</button>
+              </li>
+              <li>
+                <button data-btn-music="1">레코딩 스튜디오</button>
+              </li>
+              <li>
+                <button data-btn-music="2">저작권관리</button>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap-slide">
+            <p>새라온은 펼치지 않은 아티스트의 꿈을 <span>ON</span>합니다.</p>
+            <div id="thrSwiper" class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/business/music_01.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/music_02.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/business/music_03.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="fCenter">
+          <div class="footL">
+            <h1 class="logo">
+              <a href="#void"
+                ><img src=".images/footerLogo.png" alt="새라온이앤티 로고"
+              /></a>
+            </h1>
+
+            <div class="copy">
+              <p>Copyright 2021 새라온이앤티, All rights reserved.</p>
+              <p><a href="#void">[개인정보취급방침]</a></p>
+            </div>
+          </div>
+
+          <div class="footR">
+            <div class="telInfo">
+              <p>SAERAON OFFICE</p>
+              <p>T: 02-6975-9905</p>
+              <p>F: 070-7008-9999</p>
+            </div>
+
+            <address>
+              <p>서울시 강남구 언주로 536 태승빌딩 5F</p>
+              <p>Taeseoung Bldg, Eonji-ro, Gangnam-gu, Seoul, KR</p>
+            </address>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      let reloadTrigger = window.outerWidth < 767 ? 0 : 1
+      let preWidth = window.outerWidth
+
+      window.addEventListener('resize', () => {
+        if (preWidth < 768 && window.outerWidth > 767) {
+          location.reload()
+        }
+        if (preWidth > 767 && window.outerWidth < 768) {
+          console.log('this is samll')
+          location.reload()
+        }
+
+        if (window.outerWidth === 767) {
+          console.log(window.outerWidth)
+        }
+      })
+
+      let slidePerView = 2
+      if (window.outerWidth < 768) slidePerView = 1
+      var bullet = ['1번', '2번', '3번']
+      var swiper = new Swiper('#firSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        renderBullet: function (index, className) {
+          return `${idnex}, ${className}`
+        },
+      })
+      swiper.slideTo(0)
+      swiper.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (pageNumber === 0) {
+          pageNumber = 2
+        } else {
+          pageNumber -= 1
+        }
+
+        document.querySelectorAll('[data-btn-dev]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-dev="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      if (window.outerWidth < 768) {
+        swiper.slidesPerView = 1
+      }
+
+      document.querySelectorAll('[data-btn-dev]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          let pageNumber = e.target.dataset.btnDev
+
+          swiper.slideTo(pageNumber)
+        })
+      })
+
+      var swiper2 = new Swiper('#secSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        },
+      })
+      swiper2.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (pageNumber === 0) {
+          pageNumber = 2
+        } else {
+          pageNumber -= 1
+        }
+
+        document.querySelectorAll('[data-btn-manage]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-manage="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      document.querySelectorAll('[data-btn-manage]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          swiper2.slideTo(e.target.dataset.btnManage)
+        })
+      })
+
+      var swiper3 = new Swiper('#thrSwiper', {
+        slidesPerView: slidePerView,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      })
+
+      swiper3.slideTo(0)
+      swiper3.on('slideChange', (e) => {
+        let pageNumber = e.realIndex
+
+        if (pageNumber === 0) {
+          pageNumber = 2
+        } else {
+          pageNumber -= 1
+        }
+
+        document.querySelectorAll('[data-btn-music]').forEach((item) => {
+          item.className = ''
+        })
+        document.querySelector(
+          '[data-btn-music="' + pageNumber + '"]'
+        ).className = 'on'
+      })
+
+      document.querySelectorAll('[data-btn-music]').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          swiper3.slideTo(e.target.dataset.btnMusic)
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+}
+
+:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+:lang(en) {
+  font-family: 'Roboto', sans-serif;
+}
+
+.capeers_banner {
+  background: url(../images/contact.png);
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.header_nav {
+  display: flex;
+  padding-top: 47px;
+  padding-left: 36px;
+}
+.header_nav li:first-child {
+  padding-left: 306px;
+}
+.n_logo {
+  width: 144px;
+  height: 33px;
+  background: url(../img/saeraon_logo_w.png) no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.header_nav ul {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header_nav li {
+  font-size: 14px;
+  margin-left: 62px;
+}
+
+.n_ham {
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 1;
+  right: 36px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.n_ham > span {
+  display: block;
+  border: 1px solid white;
+  width: 30px;
+  margin: 10px 0;
+}
+/* contactWrap */
+#contactWrap .subTitle {
+  font-size: var(--font-body2);
+  letter-spacing: var(--ls-body2);
+  font-weight: var(--weight-body2);
+  text-align: center;
+}
+fieldset {
+  border: 1px solid var(--color-dark);
+}
+fieldset:first-child {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.formCenter {
+  width: 70%;
+  margin: 0 auto;
+}
+.formCenter > p {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.formCenter > p:first-of-type {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.formCenter > p:nth-of-type(5) {
+  height: 200px;
+  padding-top: 40px;
+  margin-bottom: 35px;
+}
+.formCenter > p:last-of-type {
+  margin-bottom: 75px;
+}
+.formCenter select {
+  border: 1px solid var(--color-light-gray);
+  color: var(--color-light-gray);
+  width: 200px;
+  height: 50px;
+  position: relative;
+  left: 20%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/dropArrow.png) calc(100% - 15px) center no-repeat;
+}
+.formCenter select:focus {
+  border: 1px solid var(--color-main);
+}
+.formCenter select:focus option:first-of-type {
+  display: none;
+}
+#contactWrap .formCenter label {
+  display: inline-block;
+  width: 20%;
+  white-space: nowrap;
+  font-size: var(--font-body2);
+  letter-spacing: var(--ls-body2);
+  font-weight: var(--weight-body2);
+}
+.formCenter label.inqSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.formCenter input {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid var(--color-light-gray);
+  width: 80%;
+  right: 0;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.formCenter input:focus {
+  border: 1px solid var(--color-main);
+}
+.formCenter input:focus::placeholder {
+  color: transparent;
+}
+.formCenter input#inq {
+  height: 200px;
+}
+.formCenter input#inq::placeholder {
+  position: absolute;
+  top: 15px;
+}
+p.fileEvent {
+  margin-top: 0;
+  padding-top: 35px;
+}
+p.fileEvent > label:nth-of-type(2) {
+  display: block;
+  text-align: center;
+  background-color: var(--color-light-gray);
+  color: var(--color-white);
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 90px !important;
+  cursor: pointer;
+  box-sizing: initial !important;
+}
+p.fileEvent > input#bizFile {
+  display: none !important;
+}
+p.fileEvent > span {
+  display: block;
+  position: absolute;
+  left: 21%;
+  color: var(--color-light-gray);
+  font-size: var(--font-body4);
+  letter-spacing: var(--ls-body4);
+  font-weight: var(--weight-body4);
+  padding-top: 5px;
+}
+.agreeCenter {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.agreeCenter > .agree > p {
+  text-align: left;
+  font-size: var(--font-body3);
+  letter-spacing: var(--ls-body3);
+  font-weight: var(--weight-body3);
+}
+.agreeCenter > .agree > p:first-of-type {
+  padding: 30px 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--color-light-gray);
+}
+.agreeCenter > .agree > p:last-of-type {
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.agreeCenter > label {
+  font-size: var(--font-body4);
+  letter-spacing: var(--ls-body4);
+  font-weight: var(--weight-body4);
+  padding: 30px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center !important;
+}
+input#agree {
+  display: none;
+}
+input#agree + label {
+  cursor: pointer;
+}
+input#agree + label:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+input#agree:checked + label:before {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+input#submit {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  color: var(--color-main);
+  font-size: var(--font-body3);
+  letter-spacing: var(--ls-body3);
+  font-weight: var(--weight-body3);
+  border: 1px solid var(--color-main);
+  padding: 12px 40px;
+  box-shadow: inset 0 0 0 0 var(--color-main);
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+input#submit:hover {
+  box-shadow: inset 0 100px 0 0 var(--color-main);
+  color: var(--color-white);
+}
+
+/* media qr */
+@media screen and (max-width: 1630px) {
+  /* contactWrap */
+  .formCenter {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .center {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1.title {
+    font-size: var(--font-body1);
+    font-weight: var(--weight-h1);
+    letter-spacing: var(--ls-body1);
+  }
+
+  /* contactWrap */
+  #contactWrap > .center {
+    width: 95%;
+  }
+  #contactWrap .subTitle {
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+    word-break: keep-all;
+  }
+  fieldset:first-child {
+    border-top: 2px solid var(--color-dark) !important;
+    border: 0;
+  }
+  fieldset:last-of-type {
+    border: 0;
+  }
+  .formCenter {
+    width: 95%;
+  }
+  .formCenter > p {
+    margin-bottom: 20px;
+  }
+  .formCenter > p:first-of-type {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .formCenter > p:nth-of-type(5) {
+    padding-top: 0;
+  }
+  .formCenter > p:last-of-type {
+    margin-bottom: 70px;
+  }
+  #contactWrap .formCenter label {
+    padding-bottom: 10px;
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+  }
+  .formCenter select {
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+  }
+  .formCenter input::placeholder {
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+  }
+  .formCenter label.inqSelect {
+    position: static;
+  }
+  p.fileEvent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  p.fileEvent > label:first-of-type {
+    padding-top: 20px;
+  }
+  p.fileEvent > label:nth-of-type(2) {
+    padding: 15px 20px !important;
+  }
+  p.fileEvent > span {
+    position: static;
+  }
+  .agreeCenter {
+    width: 95%;
+  }
+  .agreeCenter > .agree {
+    padding: 0 15px;
+    border: 1px solid var(--color-dark);
+  }
+  .agreeCenter > .agree > p {
+    text-align: center;
+    font-size: var(--font-body4);
+    letter-spacing: var(--ls-body4);
+    font-weight: var(--weight-body4);
+  }
+  .agreeCenter > .agree > p:last-of-type {
+    text-align: left;
+  }
+  .formCenter select {
+    position: static;
+    left: 0;
+    display: block;
+  }
+  .formCenter input {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+}
